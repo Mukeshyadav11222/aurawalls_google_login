@@ -4,320 +4,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AuraWalls | 3D Wallpaper Universe</title>
-
+<title>AuraWalls | Video Wallpaper Studio</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
- --bg:#080914;
- --panel:#11152a;
- --border:#292e4d;
- --purple:#986bff;
- --cyan:#4ce6ed;
- --text:#f8f7ff;
- --muted:#929bb9;
+  --bg:#080914;
+  --panel:#14182b;
+  --border:#292e4d;
+  --purple:#986bff;
+  --cyan:#4ce6ed;
+  --text:#f8f7ff;
+  --muted:#929bb9;
 }
 *{box-sizing:border-box}
 body{
- margin:0;
- color:var(--text);
- font-family:'DM Sans',sans-serif;
- background:
- radial-gradient(ellipse at 15% 5%,#47217d55,transparent 38%),
- radial-gradient(ellipse at 90% 25%,#075d7050,transparent 35%),
- var(--bg);
- min-height:100vh;
- overflow-x:hidden;
+  margin:0;color:var(--text);
+  font-family:'DM Sans',sans-serif;
+  background:
+  radial-gradient(ellipse at 15% 5%,#47217d55,transparent 38%),
+  radial-gradient(ellipse at 90% 25%,#075d7050,transparent 35%),
+  var(--bg);
+  min-height:100vh;
 }
 button,input{font:inherit}
 button{cursor:pointer}
 button:disabled{opacity:.5;cursor:not-allowed}
-.hidden{display:none!important}
 .container{max-width:1320px;margin:auto;padding:24px}
+.hidden{display:none!important}
 .glass{
- background:#14182bdc;
- border:1px solid var(--border);
- border-radius:22px;
- backdrop-filter:blur(18px);
- box-shadow:0 20px 60px #0004;
+  background:#14182bdc;
+  border:1px solid var(--border);
+  border-radius:22px;
+  backdrop-filter:blur(18px);
 }
 .brand{
- display:flex;align-items:center;gap:12px;
- font:700 23px 'Space Grotesk';
+  display:flex;align-items:center;gap:12px;
+  font:700 23px 'Space Grotesk';
 }
 .logo{
- width:46px;height:46px;border-radius:15px;
- display:grid;place-items:center;font-size:25px;
- background:linear-gradient(135deg,#a46cff,#35dce5);
- box-shadow:0 0 30px #9667ff66;
+  width:46px;height:46px;border-radius:15px;
+  display:grid;place-items:center;font-size:25px;
+  background:linear-gradient(135deg,#a46cff,#35dce5);
 }
 .brand small{
- display:block;font:700 9px 'DM Sans';
- color:var(--muted);letter-spacing:2px;
+  display:block;font:700 9px 'DM Sans';
+  color:var(--muted);letter-spacing:2px;
 }
 .gradient{
- background:linear-gradient(100deg,#c5a7ff,#53e5ee);
- -webkit-background-clip:text;background-clip:text;
- color:transparent;
+  background:linear-gradient(100deg,#c5a7ff,#53e5ee);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 .muted{color:var(--muted)}
 .btn{
- border:0;border-radius:12px;padding:12px 18px;
- color:white;font-weight:700;
- background:linear-gradient(110deg,#925cf6,#526af1);
- transition:.25s;
+  border:0;border-radius:12px;padding:12px 18px;
+  color:white;font-weight:700;
+  background:linear-gradient(110deg,#925cf6,#526af1);
 }
-.btn:hover{transform:translateY(-3px);filter:brightness(1.15)}
 .btn.secondary{
- background:#242943;border:1px solid #3c4362;
+  background:#242943;border:1px solid #3c4362;
 }
-.btn.danger{background:#48243b;color:#ffb9d0}
 .topbar{
- display:flex;align-items:center;
- justify-content:space-between;gap:15px;
-}
-.top-pill{
- padding:10px 15px;border:1px solid var(--border);
- border-radius:30px;color:var(--muted);font-size:12px;
+  display:flex;align-items:center;
+  justify-content:space-between;gap:15px;
 }
 .eyebrow{
- font-size:11px;font-weight:800;
- color:#b9a0ff;letter-spacing:2px;
+  font-size:11px;font-weight:800;
+  color:#b9a0ff;letter-spacing:2px;
 }
+
 /* LOGIN */
 #loginPage{
- min-height:75vh;display:grid;place-items:center;
- padding:50px 0;
+  min-height:75vh;display:grid;place-items:center;
+  padding:50px 0;
 }
 .login-card{
- max-width:490px;width:100%;padding:45px 35px;
- text-align:center;position:relative;overflow:hidden;
+  max-width:490px;width:100%;padding:40px 30px;
+  text-align:center;
 }
-.login-card:before{
- content:"";position:absolute;width:240px;height:240px;
- background:#8d55ff;filter:blur(110px);
- opacity:.3;top:-120px;left:25%;
-}
-.login-card>*{position:relative}
-.login-logo{margin:0 auto 22px;width:65px;height:65px}
 .login-card h1{
- font:700 40px/1.12 'Space Grotesk';
- margin:16px 0;
+  font:700 40px 'Space Grotesk';
 }
 .login-card p{color:var(--muted);line-height:1.7}
 .google{
- width:100%;padding:15px;background:#fff;color:#202124;
- border:0;border-radius:13px;font-weight:800;margin-top:18px;
+  width:100%;padding:15px;background:white;
+  color:#202124;border:0;border-radius:13px;
+  font-weight:800;margin-top:18px;
 }
 .google span{color:#4285f4;font-size:20px;margin-right:9px}
-.status{min-height:20px;color:#c0aaff;font-size:13px;margin-top:12px;overflow-wrap:anywhere}
-/* HERO */
+.status{min-height:20px;color:#c0aaff;font-size:13px;margin-top:12px}
+
+/* DASHBOARD */
 #dashboard{display:none}
 .hero{
- display:grid;grid-template-columns:1.4fr .8fr;
- gap:25px;align-items:center;margin:55px 0 35px;
+  display:grid;grid-template-columns:1.4fr .8fr;
+  gap:25px;align-items:center;margin:40px 0;
 }
 .hero h1{
- font:700 clamp(36px,5vw,62px)/1.08 'Space Grotesk';
- margin:13px 0;
+  font:700 clamp(36px,5vw,60px)/1.1 'Space Grotesk';
 }
 .hero p{color:var(--muted);line-height:1.7}
-.hero-art{
- min-height:220px;display:grid;place-items:center;
- perspective:900px;position:relative;
-}
 .orb{
- width:170px;height:170px;border-radius:50%;
- background:radial-gradient(circle at 35% 25%,#fff,#a7a1ff 10%,#7849dc 38%,#161a3c 72%);
- box-shadow:0 0 55px #865cff88, inset -20px -25px 45px #070914;
- transform:rotateX(20deg) rotateY(-25deg);
- animation:float 5s ease-in-out infinite;
-}
-.orb:after{
- content:"";position:absolute;inset:-25px;
- border:2px solid #9d85ff88;border-radius:50%;
- transform:rotateX(65deg);
+  width:160px;height:160px;border-radius:50%;
+  margin:auto;
+  background:radial-gradient(circle at 35% 25%,#fff,#a7a1ff 10%,#7849dc 38%,#161a3c 72%);
+  box-shadow:0 0 55px #865cff88;
+  animation:float 5s ease-in-out infinite;
 }
 @keyframes float{
- 0%,100%{transform:translateY(0) rotateX(20deg) rotateY(-25deg)}
- 50%{transform:translateY(-17px) rotateX(28deg) rotateY(15deg)}
+  50%{transform:translateY(-15px) rotateY(20deg)}
 }
-.profile{
- display:flex;align-items:center;gap:11px;
- padding:11px;border:1px solid var(--border);
- background:var(--panel);border-radius:16px;
-}
-.avatar{
- width:43px;height:43px;border-radius:50%;
- object-fit:cover;background:#303655;
-}
-.profile small{
- display:block;color:var(--muted);
- max-width:140px;overflow:hidden;text-overflow:ellipsis;
-}
-/* STATS */
 .stats{
- display:grid;grid-template-columns:repeat(3,1fr);
- gap:15px;margin:25px 0;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:15px;margin:25px 0;
 }
-.stat{padding:19px}
+.stat{padding:18px}
 .stat strong{
- display:block;font:700 26px 'Space Grotesk';
+  display:block;font:700 25px 'Space Grotesk';
 }
 .stat small{color:var(--muted)}
+
 /* EXPLORE */
 .section-head{
- display:flex;justify-content:space-between;
- align-items:end;gap:15px;margin:40px 0 18px;
+  display:flex;justify-content:space-between;
+  align-items:end;gap:15px;margin:40px 0 18px;
 }
-.section-head h2{
- font:700 25px 'Space Grotesk';margin:0 0 6px;
-}
-.categories{
- display:flex;gap:9px;flex-wrap:wrap;margin:18px 0;
-}
-.chip{
- background:#171c34;color:#b5bdd8;
- border:1px solid #303654;border-radius:30px;
- padding:10px 16px;font-size:12px;
- transition:.2s;
-}
-.chip:hover,.chip.active{
- color:white;border-color:#9873ff;
- background:linear-gradient(110deg,#6641aa,#244b70);
- box-shadow:0 0 18px #8559f944;
+.section-head h2,.gallery-head h2{
+  font:700 25px 'Space Grotesk';margin:0 0 6px;
 }
 .search-row{display:flex;gap:9px}
 .search{
- min-width:0;width:260px;padding:13px 15px;
- border-radius:12px;border:1px solid var(--border);
- background:#151a30;color:white;outline:none;
+  width:300px;max-width:100%;padding:13px 15px;
+  border-radius:12px;border:1px solid var(--border);
+  background:#151a30;color:white;outline:none;
 }
 .search:focus{border-color:var(--purple)}
-/* 3D WALLPAPER CARDS */
+.categories{
+  display:flex;gap:9px;flex-wrap:wrap;margin:18px 0;
+}
+.chip{
+  background:#171c34;color:#b5bdd8;
+  border:1px solid #303654;border-radius:30px;
+  padding:10px 15px;font-size:12px;
+}
+.chip.active{
+  color:white;border-color:#9873ff;
+  background:linear-gradient(110deg,#6641aa,#244b70);
+}
 .wall-grid{
- display:grid;
- grid-template-columns:repeat(3,minmax(0,1fr));
- gap:20px;perspective:1200px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
 }
 .wall-card{
- min-width:0;overflow:hidden;
- background:linear-gradient(145deg,#1b2039,#101426);
- border:1px solid #303654;border-radius:19px;
- transform-style:preserve-3d;
- transition:transform .3s,border-color .3s,box-shadow .3s;
+  overflow:hidden;background:linear-gradient(145deg,#1b2039,#101426);
+  border:1px solid #303654;border-radius:19px;
+  transition:.25s;
 }
 .wall-card:hover{
- transform:translateY(-8px) rotateX(2deg) rotateY(-2deg);
- border-color:#8e70e7;
- box-shadow:0 24px 45px #0006,0 0 20px #825bff22;
+  transform:translateY(-5px);
+  border-color:#8e70e7;
+  box-shadow:0 20px 40px #0006;
 }
 .wall-media{
- position:relative;height:215px;background:#060813;
- overflow:hidden;
+  position:relative;height:215px;
+  background:#060813;overflow:hidden;
 }
 .wall-media video{
- width:100%;height:100%;object-fit:cover;
- display:block;cursor:pointer;
- transition:transform .5s;
-}
-.wall-card:hover .wall-media video{transform:scale(1.04)}
-.play-overlay{
- position:absolute;inset:0;display:grid;place-items:center;
- pointer-events:none;
- background:linear-gradient(transparent,#0003);
-}
-.play-icon{
- width:48px;height:48px;border-radius:50%;
- display:grid;place-items:center;
- background:#ffffff25;border:1px solid #ffffff70;
- backdrop-filter:blur(8px);font-size:18px;
+  width:100%;height:100%;object-fit:cover;
+  display:block;cursor:pointer;
 }
 .wall-details{
- display:flex;align-items:center;
- justify-content:space-between;gap:8px;padding:13px;
+  display:flex;align-items:center;
+  justify-content:space-between;gap:8px;padding:13px;
 }
 .wall-details strong{
- display:block;font-size:13px;
- overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  display:block;font-size:13px;
+  overflow:hidden;text-overflow:ellipsis;
 }
 .wall-details small{color:var(--muted);font-size:11px}
 .wall-actions{display:flex;gap:6px}
 .wall-actions button{
- padding:8px 10px;border-radius:9px;
- border:1px solid #39415f;background:#242a46;
- color:white;font-size:12px;
+  padding:8px 10px;border-radius:9px;
+  border:1px solid #39415f;
+  background:#242a46;color:white;font-size:12px;
 }
 .empty{
- grid-column:1/-1;text-align:center;
- padding:50px 15px;border:1px dashed #414867;
- border-radius:18px;color:var(--muted);
+  grid-column:1/-1;text-align:center;
+  padding:45px 15px;border:1px dashed #414867;
+  border-radius:18px;color:var(--muted);
 }
-.loading{text-align:center;padding:40px;color:var(--muted)}
-/* UPLOAD */
-.upload-card{padding:25px;margin-top:30px}
+
+/* UPLOAD AND GALLERY */
+.upload-card{padding:25px;margin-top:35px}
 .upload-row{
- display:flex;justify-content:space-between;
- align-items:center;gap:20px;flex-wrap:wrap;
+  display:flex;justify-content:space-between;
+  align-items:center;gap:20px;flex-wrap:wrap;
 }
 .upload-card h2{font:700 22px 'Space Grotesk';margin:0}
 .upload-card p{color:var(--muted);font-size:13px}
 .file-input{max-width:100%;color:var(--muted)}
-.file-input::file-selector-button{
- background:#242943;color:white;padding:10px;
- border:1px solid #414867;border-radius:9px;
-}
 .progress{
- height:7px;border-radius:20px;
- background:#282d48;overflow:hidden;margin-top:15px;
+  height:7px;border-radius:20px;
+  background:#282d48;overflow:hidden;margin-top:15px;
 }
 .progress div{
- height:100%;width:0;
- background:linear-gradient(90deg,#986bff,#4ce6ed);
- transition:width .2s;
+  height:100%;width:0;
+  background:linear-gradient(90deg,#986bff,#4ce6ed);
 }
 .gallery-head{
- display:flex;justify-content:space-between;
- align-items:center;gap:15px;margin:40px 0 18px;
+  display:flex;justify-content:space-between;
+  align-items:center;gap:15px;margin:40px 0 18px;
 }
-.gallery-head h2{font:700 25px 'Space Grotesk';margin:0 0 5px}
+.profile{
+  display:flex;align-items:center;gap:11px;
+  padding:11px;border:1px solid var(--border);
+  background:var(--panel);border-radius:16px;
+}
+.avatar{
+  width:43px;height:43px;border-radius:50%;
+  object-fit:cover;background:#303655;
+}
+.profile small{
+  display:block;color:var(--muted);
+  max-width:160px;overflow:hidden;
+}
 footer{text-align:center;color:#69728f;padding:45px 10px;font-size:12px}
+
 /* PREVIEW */
 #previewModal{
- display:none;position:fixed;inset:0;z-index:50;
- background:#000e;align-items:center;justify-content:center;
- padding:20px;
+  display:none;position:fixed;inset:0;z-index:50;
+  background:#000e;align-items:center;
+  justify-content:center;padding:20px;
 }
 .preview-box{
- width:min(900px,100%);padding:17px;
- background:#13182d;border:1px solid #39415e;border-radius:20px;
+  width:min(900px,100%);padding:17px;
+  background:#13182d;border:1px solid #39415e;
+  border-radius:20px;
 }
-.preview-box video{width:100%;max-height:75vh;object-fit:contain}
+.preview-box video{
+  width:100%;max-height:75vh;object-fit:contain;
+}
 .preview-head{
- display:flex;align-items:center;justify-content:space-between;
- margin-bottom:12px;
+  display:flex;align-items:center;
+  justify-content:space-between;margin-bottom:12px;
 }
 @media(max-width:850px){
- .wall-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .hero{grid-template-columns:1fr .5fr}
+  .wall-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{grid-template-columns:1fr .5fr}
 }
 @media(max-width:580px){
- .container{padding:16px}
- .top-pill{display:none}
- .hero{grid-template-columns:1fr}
- .hero-art{min-height:150px}
- .orb{width:120px;height:120px}
- .wall-grid{grid-template-columns:1fr}
- .stats{gap:8px}
- .stat{padding:12px}
- .stat strong{font-size:21px}
- .section-head,.gallery-head{align-items:flex-start;flex-direction:column}
- .search{width:100%}
- .search-row{width:100%}
- .login-card{padding:32px 20px}
- .login-card h1{font-size:33px}
- .profile{width:100%;flex-wrap:wrap}
+  .container{padding:16px}
+  .hero{grid-template-columns:1fr}
+  .orb{width:115px;height:115px}
+  .wall-grid{grid-template-columns:1fr}
+  .stats{gap:8px}
+  .stat{padding:12px}
+  .section-head,.gallery-head{align-items:flex-start;flex-direction:column}
+  .search{width:100%}
+  .search-row{width:100%}
+  .login-card h1{font-size:32px}
 }
 </style>
 </head>
@@ -326,137 +273,133 @@ footer{text-align:center;color:#69728f;padding:45px 10px;font-size:12px}
 <main class="container">
 
 <header class="topbar">
- <div class="brand">
-  <div class="logo">✦</div>
-  <div>AuraWalls<small>3D WALLPAPER UNIVERSE</small></div>
- </div>
- <div class="top-pill">✦ Explore your imagination</div>
+  <div class="brand">
+    <div class="logo">✦</div>
+    <div>AuraWalls<small>VIDEO WALLPAPER STUDIO</small></div>
+  </div>
+  <div class="muted">✦ Your personal creative space</div>
 </header>
 
 <!-- LOGIN -->
 <section id="loginPage">
- <div class="glass login-card">
-  <div class="logo login-logo">✦</div>
-  <div class="eyebrow">WELCOME TO AURAWALLS</div>
-  <h1>Enter the <span class="gradient">wallpaper universe.</span></h1>
-  <p>Discover beautiful moving backgrounds and create your own collection.</p>
-  <button class="google" id="googleBtn"><span>G</span> Continue with Google</button>
-  <div class="status" id="loginStatus"></div>
-  <p style="font-size:11px">🔒 Secure Google Authentication</p>
- </div>
+  <div class="glass login-card">
+    <div class="logo" style="margin:auto">✦</div>
+    <div class="eyebrow">WELCOME TO AURAWALLS</div>
+    <h1>Enter the <span class="gradient">wallpaper universe.</span></h1>
+    <p>Discover beautiful moving backgrounds and create your own collection.</p>
+    <button class="google" id="googleBtn"><span>G</span> Continue with Google</button>
+    <div class="status" id="loginStatus"></div>
+  </div>
 </section>
 
-<!-- APP -->
+<!-- DASHBOARD -->
 <section id="dashboard">
 
- <div class="hero">
-  <div>
-   <div class="eyebrow">YOUR DIGITAL UNIVERSE</div>
-   <h1>Explore beyond <span class="gradient">ordinary.</span></h1>
-   <p>Find your vibe. Discover stunning moving wallpapers.<br>Make your screen come alive. ✨</p>
-   <button class="btn" onclick="document.getElementById('explore').scrollIntoView({behavior:'smooth'})">Explore Wallpapers ↓</button>
-  </div>
-  <div class="hero-art"><div class="orb"></div></div>
- </div>
-
- <div class="stats">
-  <div class="glass stat"><strong id="onlineCount">—</strong><small>Explore Results</small></div>
-  <div class="glass stat"><strong id="myCount">0</strong><small>My Wallpapers</small></div>
-  <div class="glass stat"><strong>3D</strong><small>Premium Experience</small></div>
- </div>
-
- <section id="explore">
-  <div class="section-head">
-   <div>
-    <div class="eyebrow">DISCOVER SOMETHING NEW</div>
-    <h2>Explore Wallpapers 🌌</h2>
-    <div class="muted" style="font-size:13px">Free video backgrounds powered by Pixabay</div>
-   </div>
-   <div class="search-row">
-    <input id="searchInput" class="search" placeholder="Search space, nature, cars...">
-    <button class="btn" id="searchBtn">Search</button>
-   </div>
+  <div class="hero">
+    <div>
+      <div class="eyebrow">YOUR DIGITAL UNIVERSE</div>
+      <h1>Explore beyond <span class="gradient">ordinary.</span></h1>
+      <p>Find your favourite video wallpapers. Search, preview and download. ✨</p>
+      <button class="btn" id="jumpExplore">Explore Wallpapers ↓</button>
+    </div>
+    <div class="orb"></div>
   </div>
 
-  <div class="categories">
-   <button class="chip active" data-query="nature">🌿 Nature</button>
-   <button class="chip" data-query="space">🌌 Space</button>
-   <button class="chip" data-query="cars">🏎 Cars</button>
-   <button class="chip" data-query="ocean">🌊 Ocean</button>
-   <button class="chip" data-query="city">🌃 City</button>
-   <button class="chip" data-query="abstract">💜 Abstract</button>
-   <button class="chip" data-query="technology">⚡ Technology</button>
+  <div class="stats">
+    <div class="glass stat"><strong id="onlineCount">0</strong><small>Online Wallpapers</small></div>
+    <div class="glass stat"><strong id="myCount">0</strong><small>My Wallpapers</small></div>
+    <div class="glass stat"><strong>50 MB</strong><small>Upload Limit</small></div>
   </div>
 
-  <div id="exploreStatus" class="status"></div>
-  <div class="wall-grid" id="exploreGrid">
-   <div class="empty">Loading wallpapers...</div>
-  </div>
- </section>
+  <!-- ONLINE WALLPAPERS -->
+  <section id="explore">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">DISCOVER SOMETHING NEW</div>
+        <h2>Explore Wallpapers 🌌</h2>
+        <div class="muted">Search your favourite video backgrounds</div>
+      </div>
+      <div class="search-row">
+        <input id="searchInput" class="search" placeholder="Search anime, cars, nature...">
+        <button class="btn" id="searchBtn">Search</button>
+      </div>
+    </div>
 
- <!-- PERSONAL UPLOAD -->
- <section class="glass upload-card">
-  <div class="upload-row">
-   <div>
-    <h2>＋ Upload your own wallpaper</h2>
-    <p>MP4, WebM, MOV · Maximum 50 MB</p>
-   </div>
-   <div>
-    <input class="file-input" id="videoFile" type="file" accept="video/mp4,video/webm,video/quicktime">
-    <button class="btn" id="uploadBtn" disabled>Upload ↑</button>
-   </div>
-  </div>
-  <div class="progress hidden" id="progress"><div id="progressBar"></div></div>
-  <div class="status" id="uploadStatus"></div>
- </section>
+    <div class="categories">
+      <button class="chip active" data-query="nature">🌿 Nature</button>
+      <button class="chip" data-query="space">🌌 Space</button>
+      <button class="chip" data-query="cars">🏎 Cars</button>
+      <button class="chip" data-query="anime">🎌 Anime</button>
+      <button class="chip" data-query="gaming">🎮 Gaming</button>
+      <button class="chip" data-query="ocean">🌊 Ocean</button>
+      <button class="chip" data-query="city night">🌃 City</button>
+      <button class="chip" data-query="abstract">💜 Abstract</button>
+      <button class="chip" data-query="technology">⚡ Technology</button>
+    </div>
 
- <div class="gallery-head">
-  <div>
-   <div class="eyebrow">YOUR PRIVATE COLLECTION</div>
-   <h2>My Wallpapers ✦</h2>
-   <small class="muted">Videos uploaded to your account</small>
-  </div>
-  <div class="profile">
-   <img id="avatar" class="avatar" alt="Profile">
-   <div>
-    <strong id="userName">User</strong>
-    <small id="userEmail"></small>
-   </div>
-   <button class="btn secondary" id="logoutBtn">Logout</button>
-  </div>
- </div>
+    <div id="exploreStatus" class="status"></div>
+    <div class="wall-grid" id="exploreGrid">
+      <div class="empty">Loading wallpapers...</div>
+    </div>
+    <div style="text-align:center;margin:25px">
+      <button class="btn secondary" id="loadMoreBtn" style="display:none">Load More ↓</button>
+    </div>
+  </section>
 
- <div class="wall-grid" id="myGrid">
-  <div class="empty">Your personal wallpapers will appear here.</div>
- </div>
+  <!-- PERSONAL UPLOAD -->
+  <section class="glass upload-card">
+    <div class="upload-row">
+      <div>
+        <h2>＋ Upload your own wallpaper</h2>
+        <p>MP4, WebM, MOV · Maximum 50 MB</p>
+      </div>
+      <div>
+        <input class="file-input" id="videoFile" type="file" accept="video/mp4,video/webm,video/quicktime">
+        <button class="btn" id="uploadBtn" disabled>Upload ↑</button>
+      </div>
+    </div>
+    <div class="progress hidden" id="progress"><div id="progressBar"></div></div>
+    <div class="status" id="uploadStatus"></div>
+  </section>
+
+  <!-- PERSONAL GALLERY -->
+  <div class="gallery-head">
+    <div>
+      <div class="eyebrow">YOUR PRIVATE COLLECTION</div>
+      <h2>My Wallpapers ✦</h2>
+      <small class="muted">Videos uploaded to your account</small>
+    </div>
+    <div class="profile">
+      <img id="avatar" class="avatar" alt="Profile">
+      <div>
+        <strong id="userName">User</strong>
+        <small id="userEmail"></small>
+      </div>
+      <button class="btn secondary" id="logoutBtn">Logout ↗</button>
+    </div>
+  </div>
+  <div class="wall-grid" id="myGrid">
+    <div class="empty">Your personal wallpapers will appear here.</div>
+  </div>
 
 </section>
-<footer>AuraWalls © 2026 · Made for your screen ✦</footer>
+<footer>AuraWalls © 2026 · Designed for your screen ✦</footer>
 </main>
 
 <div id="previewModal">
- <div class="preview-box">
-  <div class="preview-head">
-   <strong>Wallpaper Preview ✦</strong>
-   <button class="btn secondary" id="closePreview">✕ Close</button>
+  <div class="preview-box">
+    <div class="preview-head">
+      <strong>Wallpaper Preview ✦</strong>
+      <button class="btn secondary" id="closePreview">✕ Close</button>
+    </div>
+    <video id="previewVideo" controls playsinline></video>
   </div>
-  <video id="previewVideo" controls playsinline></video>
- </div>
 </div>
 
 <script type="module">
-import {initializeApp}
- from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
-import {
- getAuth,GoogleAuthProvider,signInWithPopup,
- onAuthStateChanged,signOut
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-import {
- getStorage,ref,uploadBytesResumable,listAll,
- getDownloadURL,deleteObject
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import{getAuth,GoogleAuthProvider,signInWithPopup,onAuthStateChanged,signOut}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import{getStorage,ref,uploadBytesResumable,listAll,getDownloadURL,deleteObject}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 
 /* FIREBASE CONFIG */
 const firebaseConfig={
@@ -469,11 +412,7 @@ const firebaseConfig={
  measurementId:"G-3VLZ4THMQQ"
 };
 
-/* PIXABAY DEMO KEY
-   Put your NEW rotated Pixabay key here.
-   This frontend key is visible to website visitors.
-   Use a backend proxy for production.
-*/
+/* PIXABAY API KEY */
 const PIXABAY_API_KEY="37980710-da4af94d73e9f3f8fff54545e";
 
 const app=initializeApp(firebaseConfig);
@@ -482,8 +421,11 @@ const storage=getStorage(app);
 const $=id=>document.getElementById(id);
 
 let currentUser=null;
+let currentQuery="nature";
+let currentPage=1;
 let exploreVideos=[];
 let myVideos=[];
+let requestNumber=0;
 
 function status(id,msg){$(id).textContent=msg;}
 
@@ -498,7 +440,7 @@ onAuthStateChanged(auth,async user=>{
   $("userEmail").textContent=user.email||"";
   $("avatar").src=user.photoURL||"";
   await loadMyVideos();
-  searchPixabay("nature");
+  searchPixabay("nature",1);
  }
 });
 
@@ -509,7 +451,6 @@ $("googleBtn").onclick=async()=>{
   const provider=new GoogleAuthProvider();
   provider.setCustomParameters({prompt:"select_account"});
   await signInWithPopup(auth,provider);
-  status("loginStatus","");
  }catch(e){
   status("loginStatus",e.code+": "+e.message);
  }finally{
@@ -518,28 +459,38 @@ $("googleBtn").onclick=async()=>{
 };
 
 $("logoutBtn").onclick=()=>signOut(auth);
+$("jumpExplore").onclick=()=>$("explore").scrollIntoView({behavior:"smooth"});
 
-/* PIXABAY VIDEO API */
-async function searchPixabay(query){
+/* PIXABAY SEARCH */
+async function searchPixabay(query,page=1){
+ const requestId=++requestNumber;
+ currentQuery=query;
+ currentPage=page;
  const grid=$("exploreGrid");
- grid.innerHTML='<div class="empty">✨ Discovering wallpapers...</div>';
- status("exploreStatus","");
 
- if(!PIXABAY_API_KEY || PIXABAY_API_KEY.includes("PASTE_")){
-  grid.innerHTML='<div class="empty">Add your new Pixabay API key in the code to load wallpapers.</div>';
+ if(page===1){
+  exploreVideos=[];
+  grid.innerHTML='<div class="empty">✨ Finding wallpapers...</div>';
+ }else{
+  $("loadMoreBtn").disabled=true;
+  $("loadMoreBtn").textContent="Loading...";
+ }
+
+ if(!PIXABAY_API_KEY||PIXABAY_API_KEY.includes("PASTE_")){
+  grid.innerHTML='<div class="empty">Pixabay API key missing. Add your new API key in the code.</div>';
+  status("exploreStatus","API key configuration required.");
+  $("loadMoreBtn").style.display="none";
   return;
  }
 
- const cacheKey="aurawalls_pixabay_"+query;
+ const cacheKey="aurawalls_"+query+"_page_"+page;
  try{
   let data=null;
   const cached=localStorage.getItem(cacheKey);
 
   if(cached){
    const saved=JSON.parse(cached);
-   if(Date.now()-saved.time<24*60*60*1000){
-    data=saved.data;
-   }
+   if(Date.now()-saved.time<24*60*60*1000)data=saved.data;
   }
 
   if(!data){
@@ -547,41 +498,54 @@ async function searchPixabay(query){
    url.searchParams.set("key",PIXABAY_API_KEY);
    url.searchParams.set("q",query);
    url.searchParams.set("per_page","18");
+   url.searchParams.set("page",String(page));
    url.searchParams.set("safesearch","true");
 
    const response=await fetch(url);
-   if(!response.ok){
-    throw new Error("Pixabay API error: "+response.status);
-   }
-
+   if(!response.ok)throw new Error("Pixabay HTTP "+response.status);
    data=await response.json();
-   localStorage.setItem(cacheKey,JSON.stringify({
-    time:Date.now(),data
-   }));
+   if(data.error)throw new Error(data.error);
+   localStorage.setItem(cacheKey,JSON.stringify({time:Date.now(),data}));
   }
 
-  exploreVideos=data.hits||[];
+  if(requestId!==requestNumber)return;
+
+  const hits=data.hits||[];
+  exploreVideos=page===1?hits:[...exploreVideos,...hits];
   $("onlineCount").textContent=exploreVideos.length;
   renderExplore();
 
+  $("loadMoreBtn").style.display=hits.length?"inline-block":"none";
+  $("loadMoreBtn").disabled=false;
+  $("loadMoreBtn").textContent="Load More ↓";
+
  }catch(e){
-  grid.innerHTML='<div class="empty">Could not load wallpapers. Please try again later.</div>';
-  status("exploreStatus",e.message+" — Check your API key or rate limit.");
+  if(requestId!==requestNumber)return;
+  grid.innerHTML=page===1?
+   '<div class="empty">Could not load wallpapers. Check API key or internet.</div>':
+   grid.innerHTML;
+  status("exploreStatus",e.message);
+  $("loadMoreBtn").disabled=false;
+  $("loadMoreBtn").textContent="Try Again";
  }
 }
 
+/* WALLPAPER CARDS */
 function renderExplore(){
  const grid=$("exploreGrid");
  grid.innerHTML="";
 
- if(!exploreVideos.length){
-  grid.innerHTML='<div class="empty">No videos found. Try another search.</div>';
+ const items=exploreVideos.filter(item=>
+  item.videos?.medium?.url||item.videos?.small?.url
+ );
+
+ if(!items.length){
+  grid.innerHTML='<div class="empty">No wallpapers found. Try another search.</div>';
   return;
  }
 
- exploreVideos.forEach(item=>{
-  const videoUrl=item.videos?.medium?.url||item.videos?.small?.url;
-  if(!videoUrl)return;
+ items.forEach(item=>{
+  const videoUrl=item.videos.medium?.url||item.videos.small.url;
 
   const card=document.createElement("article");
   card.className="wall-card";
@@ -594,16 +558,13 @@ function renderExplore(){
   video.muted=true;
   video.loop=true;
   video.playsInline=true;
-  video.preload="metadata";
+  video.preload="none";
   video.poster=item.userImageURL||"";
+
   video.onmouseenter=()=>video.play().catch(()=>{});
   video.onmouseleave=()=>{video.pause();video.currentTime=0;};
 
-  const overlay=document.createElement("div");
-  overlay.className="play-overlay";
-  overlay.innerHTML='<div class="play-icon">▶</div>';
-
-  media.append(video,overlay);
+  media.append(video);
   media.onclick=()=>openPreview(videoUrl);
 
   const details=document.createElement("div");
@@ -611,7 +572,7 @@ function renderExplore(){
 
   const info=document.createElement("div");
   const title=document.createElement("strong");
-  title.textContent=item.tags||"Video Wallpaper";
+  title.textContent=(item.tags||"Video Wallpaper").split(",").slice(0,2).join(",");
   const author=document.createElement("small");
   author.textContent="By "+(item.user||"Pixabay creator");
   info.append(title,author);
@@ -624,23 +585,48 @@ function renderExplore(){
   view.onclick=()=>openPreview(videoUrl);
 
   const download=document.createElement("button");
-  download.textContent="↗ Source";
-  download.onclick=()=>{
-   window.open(item.pageURL,"_blank","noopener,noreferrer");
-  };
+  download.textContent="⬇ Download";
+  download.onclick=()=>downloadVideo(videoUrl,item.id);
 
-  actions.append(view,download);
+  const source=document.createElement("button");
+  source.textContent="↗ Source";
+  source.onclick=()=>window.open(item.pageURL,"_blank","noopener,noreferrer");
+
+  actions.append(view,download,source);
   details.append(info,actions);
   card.append(media,details);
   grid.append(card);
  });
 }
 
-/* SEARCH */
+/* DIRECT DOWNLOAD ATTEMPT */
+async function downloadVideo(url,id){
+ status("exploreStatus","Preparing video download...");
+ try{
+  const response=await fetch(url);
+  if(!response.ok)throw new Error("Download unavailable");
+  const blob=await response.blob();
+  const objectURL=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=objectURL;
+  a.download="AuraWalls_"+id+".mp4";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(()=>URL.revokeObjectURL(objectURL),60000);
+  status("exploreStatus","Download started!");
+ }catch(e){
+  status("exploreStatus","Direct download blocked by video host. Opening creator source page instead.");
+  const item=exploreVideos.find(v=>String(v.id)===String(id));
+  if(item?.pageURL)window.open(item.pageURL,"_blank","noopener,noreferrer");
+ }
+}
+
+/* SEARCH CONTROLS */
 $("searchBtn").onclick=()=>{
- const query=$("searchInput").value.trim()||"nature";
+ const q=$("searchInput").value.trim()||"nature";
  setActiveChip(null);
- searchPixabay(query);
+ searchPixabay(q,1);
 };
 
 $("searchInput").addEventListener("keydown",e=>{
@@ -650,7 +636,8 @@ $("searchInput").addEventListener("keydown",e=>{
 document.querySelectorAll(".chip").forEach(chip=>{
  chip.onclick=()=>{
   setActiveChip(chip);
-  searchPixabay(chip.dataset.query);
+  $("searchInput").value="";
+  searchPixabay(chip.dataset.query,1);
  };
 });
 
@@ -660,25 +647,25 @@ function setActiveChip(selected){
  );
 }
 
+$("loadMoreBtn").onclick=()=>searchPixabay(currentQuery,currentPage+1);
+
 /* PREVIEW */
 function openPreview(url){
  $("previewVideo").src=url;
  $("previewModal").style.display="flex";
  $("previewVideo").play().catch(()=>{});
 }
-
 $("closePreview").onclick=()=>{
  $("previewVideo").pause();
  $("previewVideo").removeAttribute("src");
  $("previewVideo").load();
  $("previewModal").style.display="none";
 };
-
 $("previewModal").onclick=e=>{
  if(e.target===$("previewModal"))$("closePreview").click();
 };
 
-/* FIREBASE VIDEO UPLOAD */
+/* FIREBASE UPLOAD */
 $("videoFile").onchange=()=>{
  const file=$("videoFile").files[0];
  const valid=file&&file.type.startsWith("video/")&&file.size<=50*1024*1024;
@@ -715,7 +702,6 @@ $("uploadBtn").onclick=()=>{
    $("videoFile").value="";
    $("uploadBtn").disabled=true;
    await loadMyVideos();
-   setTimeout(()=>$("progress").classList.add("hidden"),1200);
   }
  );
 };
@@ -768,7 +754,6 @@ function renderMyVideos(){
   video.loop=true;
   video.playsInline=true;
   video.onclick=()=>openPreview(w.url);
-
   media.append(video);
 
   const details=document.createElement("div");
