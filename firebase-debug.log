@@ -1,0 +1,74 @@
+[debug] [2026-11-14T10:36:16.967Z] ----------------------------------------------------------------------
+[debug] [2026-11-14T10:36:16.969Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-11-14T10:36:16.969Z] CLI Version:   15.36.0
+[debug] [2026-11-14T10:36:16.970Z] Platform:      win32
+[debug] [2026-11-14T10:36:16.970Z] Node Version:  v26.13.1
+[debug] [2026-11-14T10:36:16.970Z] Detected Agent: unknown
+[debug] [2026-11-14T10:36:16.970Z] Time:          Sat Nov 14 2026 16:06:16 GMT+0530 (India Standard Time)
+[debug] [2026-11-14T10:36:16.970Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\user\Downloads\aurawalls_google_login
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-11-14T10:36:23.194Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-14T10:36:23.195Z] > authorizing via signed-in user (mky888918@gmail.com)
+[debug] [2026-11-14T10:36:23.216Z] Checked if tokens are valid: true, expires at: 1794653781714
+[debug] [2026-11-14T10:36:23.216Z] Checked if tokens are valid: true, expires at: 1794653781714
+[debug] [2026-11-14T10:36:23.220Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aurawells-live [none]
+[debug] [2026-11-14T10:36:23.955Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aurawells-live 200
+[debug] [2026-11-14T10:36:23.956Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aurawells-live {"projectId":"aurawells-live","projectNumber":"857362420999","displayName":"AURAWELLS LIVE","name":"projects/aurawells-live","resources":{"hostingSite":"aurawells-live"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_5267e74b-a175-4229-a90c-249bce60f3c9"}
+[info] i  Using project aurawells-live (AURAWELLS LIVE) . 
+[info] 
+=== Hosting Setup
+[debug] [2026-11-14T10:36:23.980Z] Checked if tokens are valid: true, expires at: 1794653781714
+[debug] [2026-11-14T10:36:23.980Z] Checked if tokens are valid: true, expires at: 1794653781714
+[debug] [2026-11-14T10:36:23.981Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aurawells-live [none]
+[debug] [2026-11-14T10:36:24.554Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aurawells-live 200
+[debug] [2026-11-14T10:36:24.554Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aurawells-live {"projectId":"aurawells-live","projectNumber":"857362420999","displayName":"AURAWELLS LIVE","name":"projects/aurawells-live","resources":{"hostingSite":"aurawells-live"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_5267e74b-a175-4229-a90c-249bce60f3c9"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\user\Downloads\aurawalls_google_login is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=403739864&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2026-11-14T10:36:36.331Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2026-11-14T10:36:36.331Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2026-11-14T10:36:36.836Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2026-11-14T10:36:36.837Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2026-11-14T10:36:36.857Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2026-11-14T10:36:37.460Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2026-11-14T10:36:37.461Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Mukeshyadav11222","id":236453126,"node_id":"U_kgDODhf9Bg","avatar_url":"https://avatars.githubusercontent.com/u/236453126?v=4","gravatar_id":"","url":"https://api.github.com/users/Mukeshyadav11222","html_url":"https://github.com/Mukeshyadav11222","followers_url":"https://api.github.com/users/Mukeshyadav11222/followers","following_url":"https://api.github.com/users/Mukeshyadav11222/following{/other_user}","gists_url":"https://api.github.com/users/Mukeshyadav11222/gists{/gist_id}","starred_url":"https://api.github.com/users/Mukeshyadav11222/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Mukeshyadav11222/subscriptions","organizations_url":"https://api.github.com/users/Mukeshyadav11222/orgs","repos_url":"https://api.github.com/users/Mukeshyadav11222/repos","events_url":"https://api.github.com/users/Mukeshyadav11222/events{/privacy}","received_events_url":"https://api.github.com/users/Mukeshyadav11222/received_events","type":"User","user_view_type":"private","site_admin":false,"name":"Mukesh Yadav","company":null,"blog":"","location":null,"email":"mky888918@gmail.com","hireable":null,"bio":"BCA Graduate | Python | MySQL | HTML | CSS | JavaScript | Exploring New Technologies","twitter_username":null,"notification_email":"mky888918@gmail.com","public_repos":1,"public_gists":0,"followers":0,"following":0,"created_at":"2025-10-06T18:38:34Z","updated_at":"2026-11-13T06:32:00Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":1,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Mukeshyadav11222 
+[info] 
+[debug] [2026-11-14T10:37:00.442Z] >>> [apiv2][query] GET https://api.github.com/repos/Mukeshyadav11222/aurawalls_google_login/actions/secrets/public-key type=owner
+[debug] [2026-11-14T10:37:00.870Z] <<< [apiv2][status] GET https://api.github.com/repos/Mukeshyadav11222/aurawalls_google_login/actions/secrets/public-key 404
+[debug] [2026-11-14T10:37:00.870Z] <<< [apiv2][body] GET https://api.github.com/repos/Mukeshyadav11222/aurawalls_google_login/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
